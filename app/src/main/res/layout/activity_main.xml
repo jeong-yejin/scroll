@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<HorizontalScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:overScrollMode="never"
+    android:scrollbars="none" >
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chipGroup"
+        android:background="#000000">
+        <com.google.android.material.chip.Chip
+            android:id="@+id/comming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Chip.Action"
+            android:background="#FFFFFF"
+            android:text="공개 예정"
+            app:chipIcon="@drawable/comming"/>
+        <com.google.android.material.chip.Chip
+            android:id="@+id/popular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Chip.Action"
+            android:background="#FFFFFF"
+            android:text="모두에게 인기있는 콘텐츠"
+            app:chipIcon="@drawable/popular"/>
+        <com.google.android.material.chip.Chip
+            android:id="@+id/series"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Chip.Action"
+            android:background="#FFFFFF"
+            android:text="Top10 시리즈" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/movie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Chip.Action"
+            android:background="#FFFFFF"
+            android:text="Top10 영화" />
+    </com.google.android.material.chip.ChipGroup>
+</HorizontalScrollView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:drawableStart="@drawable/comming_resize"
+        android:drawablePadding="10dp"
+        android:text="공개 예정"
+        android:background="@color/black"
+        android:textColor="#FFFFFF"
+        android:textSize="45dp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollContents"
+        tools:context=".MainActivity"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#ff0000"
+                android:gravity="center"
+                android:text="red" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#0BAC00"
+                android:gravity="center"
+                android:text="green" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#0076C5"
+                android:gravity="center"
+                android:text="blue" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#6F50F8"
+                android:gravity="center"
+                android:text="pupple" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#FFEB3B"
+                android:gravity="center"
+                android:text="yellow" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
